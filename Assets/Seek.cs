@@ -9,6 +9,7 @@ public class Seek : SteeringBehaviour
     public GameObject targetGameObject = null;
 
     public Vector3 target = Vector3.zero;
+    public BallPickUp _ballPickUp;
 
     public void OnDrawGizmos()
     {
@@ -32,7 +33,26 @@ public class Seek : SteeringBehaviour
     {
         if (targetGameObject != null)
         {
-            target = targetGameObject.transform.position;
+            if (targetGameObject.CompareTag("Player"))
+            {
+                var dist = Vector3.Distance(targetGameObject.transform.position, transform.position);
+                
+                if (dist < 10)
+                {
+                    _ballPickUp.DropBall();
+                    targetGameObject = null;
+                    var boidScript = GetComponent<Boid>();
+                    boidScript.canMove = false;
+                }
+                else
+                {
+                    target = new Vector3(targetGameObject.transform.position.x, 0f, targetGameObject.transform.position.z);
+                }
+            }
+            else
+            {
+                target = new Vector3(targetGameObject.transform.position.x, 0f, targetGameObject.transform.position.z);
+            }
         }
     }
 }

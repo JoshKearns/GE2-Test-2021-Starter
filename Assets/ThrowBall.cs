@@ -9,6 +9,7 @@ public class ThrowBall : MonoBehaviour
     public float ballThrowSpeed;
 
     public Bark barkScript;
+    public Seek seekScript;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class ThrowBall : MonoBehaviour
             spawnBall.GetComponent<Rigidbody>().AddForce(targetDir * ballThrowSpeed);
             
             barkScript.barkFunction();
+            seekScript.targetGameObject = spawnBall;
         }
     }
 }

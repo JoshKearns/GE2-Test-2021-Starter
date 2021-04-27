@@ -13,13 +13,23 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Bark.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Boid.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BallPickUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Arrive.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ThrowBall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FollowPath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Seek.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Bark.cs" />
         <option value="$PROJECT_DIR$/Assets/ThrowBall.cs" />
+        <option value="$PROJECT_DIR$/Assets/Arrive.cs" />
+        <option value="$PROJECT_DIR$/Assets/BallPickUp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Boid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Seek.cs" />
       </list>
     </option>
   </component>
@@ -69,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619525865252</updated>
-      <workItem from="1619525869378" duration="918000" />
+      <workItem from="1619525869378" duration="5172000" />
     </task>
     <servers />
   </component>
