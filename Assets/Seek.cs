@@ -39,6 +39,9 @@ public class Seek : SteeringBehaviour
                 
                 if (dist < 10)
                 {
+                    var player = GameObject.FindGameObjectWithTag("Player");
+                    player.GetComponent<ThrowBall>().canThrow = true; Debug.Log("Test");
+                    
                     _ballPickUp.DropBall();
                     targetGameObject = null;
                     var boidScript = GetComponent<Boid>();

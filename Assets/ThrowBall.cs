@@ -12,18 +12,22 @@ public class ThrowBall : MonoBehaviour
     public Seek seekScript;
     public Boid boidScript;
     public BallPickUp ballPickUpScript;
+
+    public bool canThrow;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        canThrow = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canThrow)
         {
+            canThrow = false;
+            
             var targetDir = ballPos.position - transform.position;
             var spawnBall = Instantiate(ball, ballPos.transform.position, Quaternion.identity);
             spawnBall.GetComponent<Rigidbody>().AddForce(targetDir * ballThrowSpeed);
