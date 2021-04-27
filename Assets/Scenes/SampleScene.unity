@@ -420,6 +420,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   - component: {fileID: 963194231}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -488,7 +489,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1837198360}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -575,6 +577,22 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89785319a76593d4b99b6d47bd37104f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 3627371103750170129, guid: b471fff3b0213bb4882085e357ee2c4e, type: 3}
+  ballPos: {fileID: 1837198360}
+  ballThrowSpeed: 2000
+  barkScript: {fileID: 1503941571}
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,10 +649,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9abdc16a6d6624d9b99b72bafa2fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 1
-  amplitude: 20
-  b: {fileID: 0}
-  theta: 0
 --- !u!1 &1296423582
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1503941576}
   - component: {fileID: 1503941577}
+  - component: {fileID: 1503941571}
   m_Layer: 0
   m_Name: dog
   m_TagString: Untagged
@@ -875,6 +890,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1503941571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503941570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1616c11a86db3f14f866f075c30e12df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barks:
+  - {fileID: 8300000, guid: 867857052f160244d9986e424e054ba1, type: 3}
+  - {fileID: 8300000, guid: ebe7af9d41161724d9a89bc307eca844, type: 3}
+  - {fileID: 8300000, guid: f5bfccef8bca7c64baa0a82e0f0769d6, type: 3}
+  - {fileID: 8300000, guid: bb762a9cd9b10694eaf8defd6110f12e, type: 3}
+  - {fileID: 8300000, guid: ef82739b22e280b439f0027045c8f4bc, type: 3}
+  - {fileID: 8300000, guid: da06bc547aaadab479e7cac9ea4fa939, type: 3}
 --- !u!4 &1503941576
 Transform:
   m_ObjectHideFlags: 0
@@ -890,7 +924,7 @@ Transform:
   - {fileID: 892102899}
   - {fileID: 1181318722}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!82 &1503941577
 AudioSource:
@@ -988,6 +1022,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1837198359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837198360}
+  m_Layer: 0
+  m_Name: Ball Throw Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1837198360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837198359}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1904013037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,7 +1065,7 @@ GameObject:
   - component: {fileID: 1904013039}
   - component: {fileID: 1904013038}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1082,5 +1146,5 @@ Transform:
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
