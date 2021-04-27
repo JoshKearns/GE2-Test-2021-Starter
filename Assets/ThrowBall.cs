@@ -10,6 +10,8 @@ public class ThrowBall : MonoBehaviour
 
     public Bark barkScript;
     public Seek seekScript;
+    public Boid boidScript;
+    public BallPickUp ballPickUpScript;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,10 @@ public class ThrowBall : MonoBehaviour
             
             barkScript.barkFunction();
             seekScript.targetGameObject = spawnBall;
+
+            boidScript.canMove = true;
+            
+            ballPickUpScript.DropBall();
         }
     }
 }

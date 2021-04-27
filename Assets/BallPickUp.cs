@@ -22,6 +22,7 @@ public class BallPickUp : MonoBehaviour
     {
         var ball = transform.GetChild(0);
 
+        ball.GetComponent<Collider>().isTrigger = false;
         ball.transform.parent = null;
         ball.GetComponent<Rigidbody>().useGravity = true;
     }

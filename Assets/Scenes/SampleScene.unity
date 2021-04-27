@@ -367,7 +367,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 3, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &892102898
 GameObject:
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24a86df40fb03d40950b51a5f946f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 963194225}
   speed: 50
   lookSpeed: 150
   allowPitch: 1
@@ -651,6 +651,8 @@ MonoBehaviour:
   ballThrowSpeed: 2000
   barkScript: {fileID: 1503941571}
   seekScript: {fileID: 1503941572}
+  boidScript: {fileID: 1503941573}
+  ballPickUpScript: {fileID: 729530952}
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,7 +945,6 @@ GameObject:
   - component: {fileID: 1503941571}
   - component: {fileID: 1503941572}
   - component: {fileID: 1503941573}
-  - component: {fileID: 1503941574}
   m_Layer: 0
   m_Name: dog
   m_TagString: Dog
@@ -987,7 +988,7 @@ MonoBehaviour:
   boid: {fileID: 0}
   targetGameObject: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
-  _ballPickUp: {fileID: 0}
+  _ballPickUp: {fileID: 729530952}
 --- !u!114 &1503941573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,28 +1005,11 @@ MonoBehaviour:
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
-  damping: 0
-  banking: 0.1
+  damping: 0.1
+  banking: 0.2
   maxSpeed: 5
   maxForce: 10
---- !u!114 &1503941574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503941570}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d60a1b42aa563b4fab355ebfdf12f6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 1
-  force: {x: 0, y: 0, z: 0}
-  boid: {fileID: 0}
-  targetPosition: {x: 0, y: 0, z: 0}
-  slowingDistance: 5
-  targetGameObject: {fileID: 729530950}
+  canMove: 1
 --- !u!4 &1503941576
 Transform:
   m_ObjectHideFlags: 0
