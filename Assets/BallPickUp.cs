@@ -25,5 +25,8 @@ public class BallPickUp : MonoBehaviour
         ball.GetComponent<Collider>().isTrigger = false;
         ball.transform.parent = null;
         ball.GetComponent<Rigidbody>().useGravity = true;
+
+        var barkScript = transform.parent.GetComponent<Bark>();
+        barkScript.barkFunction();
     }
 }
